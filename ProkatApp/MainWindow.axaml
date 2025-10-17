@@ -1,0 +1,94 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ProkatApp.MainWindow"
+        Title="ProkatApp"
+		Background="RGB(255, 255, 255)"
+		MinWidth="400">
+	<Grid ShowGridLines="False" RowDefinitions="30, *, 30" ColumnDefinitions="50, *, 50">
+		<Grid ShowGridLines="False" Grid.Row="1" Grid.Column="1" RowDefinitions="*,*,*,*" ColumnDefinitions="*,2*,*">
+			<Border Grid.Column="1"
+				   Grid.Row="0"
+				   Background="RGB(118, 227, 131)"
+				   Grid.RowSpan="4"
+				   CornerRadius="30"
+				   />
+			<Border Grid.Column="1"
+				   Grid.Row="0"
+				   Background="RGB(73, 140,81)"
+				   CornerRadius="30"
+				   />
+			<TextBlock 
+				Text="Авторизация" 
+				Grid.Column="1" 
+				Grid.Row="0" 
+			    TextAlignment="Center" 
+				VerticalAlignment="Center" 
+				HorizontalAlignment="Center"
+				FontFamily="Comic Sans MS"
+				FontSize="40"
+				Foreground="Black"/>
+			<TextBox 
+				x:Name="loginTextBox"
+				Grid.Row="1" 
+				Grid.Column="1"
+				Text="fedorov@namecomp.ru"
+				Margin="10"
+				HorizontalContentAlignment="Center"
+				VerticalContentAlignment="Center"
+				Watermark="Логин"
+				FontSize="20"
+				CornerRadius="10"
+				Foreground="White"
+				FontFamily="Comic Sans MS"/>
+			<Grid
+				Grid.Column="1"
+				Grid.Row="2"
+				RowDefinitions="*"
+				ColumnDefinitions="6*,*">
+			<TextBox
+				Name="passwordTextBox"
+				Grid.Row="0" 
+				Text="8ntwUp"
+				Grid.Column="0" 
+				Margin="10"
+				HorizontalContentAlignment="Center"
+				VerticalContentAlignment="Center"
+				CornerRadius="10"
+				FontSize="20"
+				Foreground="White"
+				FontFamily="Comic Sans MS"
+				Watermark="Пароль"
+				PasswordChar="*"
+				RevealPassword="False"/>
+			<Button
+				Name="showPasswordBtn"
+				Click="showPasswordBtn_click"
+				Content="+"
+				Grid.Row="2"
+				Grid.Column="1"
+				Margin="0,0,10,0"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"/>
+			</Grid>
+			<Button Grid.Row="3"
+					Name="LoginBtn"
+					Grid.Column="1"
+					Click="LoginBtn_click"
+					HorizontalContentAlignment="Center"
+					VerticalContentAlignment="Center"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					Content="Войти"
+					FontFamily="Comic Sans MS"
+					FontSize="20"
+					CornerRadius="10"
+					Height="50"
+					Width="200"
+					Foreground="Black"
+					Background="RGB(73, 140,81)"/>
+		</Grid>
+	</Grid>
+</Window>

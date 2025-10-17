@@ -1,0 +1,164 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ProkatApp.OrderWindow"
+		x:CompileBindings="False"
+        Title="OrderWindow"
+		Background="RGB(255, 255, 255)">
+	<Grid ShowGridLines="False" RowDefinitions="30,*,30" ColumnDefinitions="*,3*,2*,*,*,*">
+		<Grid
+			ShowGridLines="True"
+			Grid.Row="1"
+			Grid.Column="1"
+			Grid.ColumnSpan="4"
+			RowDefinitions="*,*,*,*,*,*"
+			ColumnDefinitions="*,*">
+			<Border
+				Grid.RowSpan="6"
+				Grid.Row="0"
+				Grid.Column="0"
+				Background="RGB(118, 227, 131)"
+				CornerRadius="30"/>
+			<Border
+				Grid.Row="0"
+				Grid.Column="0"
+				Background="RGB(73, 140,81)"
+				CornerRadius="30"/>
+			<Border
+				Grid.Row="0"
+				Grid.Column="1"
+				Grid.RowSpan="4"
+				Background="RGB(118, 227, 131)"
+				CornerRadius="30"/>
+			<Border
+				Grid.Row="0"
+				Grid.Column="1"
+				Background="RGB(73, 140,81)"
+				CornerRadius="30"/>
+			<TextBlock
+				Text="Список Услуг:"
+				Grid.Column="1"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"
+				FontFamily="Comic Sans MS"
+				FontSize="30"
+				Foreground="Black"/>
+			<Button
+				Grid.Row="3"
+				Grid.Column="1"
+				Name="clearServicesBtn"
+				Click="clearServicesBtn_click"
+				HorizontalContentAlignment="Center"
+				VerticalContentAlignment="Center"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Content="Очистить"
+				FontFamily="Comic Sans MS"
+				FontSize="20"
+				CornerRadius="10"
+				Height="50"
+				Width="200"
+				Foreground="Black"
+				Background="RGB(73, 140,81)"/>
+			<TextBox
+				Name="listServicesTextBox"
+				Grid.Column="1"
+				Grid.Row="1"
+				Grid.RowSpan="2"
+				Margin="10"
+				VerticalContentAlignment="Center"
+				HorizontalContentAlignment="Center"
+				FontSize="20"
+				Foreground="White"
+				CornerRadius="10"/>
+			<TextBlock
+				Text="Регистрация заказа"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"
+				FontFamily="Comic Sans MS"
+				FontSize="30"
+				Foreground="Black"/>
+			<TextBox
+				Name="orderCodeTextBox"
+				Grid.Row="1"
+				Margin="10"
+				VerticalContentAlignment="Center"
+				HorizontalContentAlignment="Center"
+				Watermark="Код заказа"
+				FontSize="20"
+				Foreground="White"
+				CornerRadius="10"/>
+			<ComboBox
+				Name="ClientComboBox"
+				Grid.Row="2"
+				VerticalAlignment="Stretch"
+				HorizontalAlignment="Stretch"
+				HorizontalContentAlignment="Center"
+				Margin="10"
+				PlaceholderText="Клиент"
+				FontSize="20"
+				CornerRadius="10"
+				PlaceholderForeground="LightGray">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding Fio}"></TextBlock>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+			<ComboBox
+				Name="ServiceComboBox"
+				Grid.Row="3"
+				VerticalAlignment="Stretch"
+				HorizontalAlignment="Stretch"
+				Margin="10"
+				PlaceholderText="Вид услуги"
+				VerticalContentAlignment="Center"
+				HorizontalContentAlignment="Center"
+				FontSize="20"
+				CornerRadius="10"
+				PlaceholderForeground="LightGray"
+				SelectionChanged="ServiceCB_SelectionChanged">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding ServiceTittle}"></TextBlock>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+			<!--><Button
+				Name="addServiceBtn"
+				Grid.Column="0"
+				Grid.Row="3"
+				Content="+"
+				Click="addServiceBtn_click"/><-->
+			<TextBox
+				Name="rentTimeTextBox"
+				Grid.Row="4"
+				Margin="10"
+				VerticalContentAlignment="Center"
+				HorizontalContentAlignment="Center"
+				Watermark="Время аренды (мин.)"
+				FontSize="20"
+				CornerRadius="10"
+				Foreground="white"/>
+			<Button
+				Grid.Row="5"
+				Name="addOrderBtn"
+				Click="addOrderBtn_click"
+				HorizontalContentAlignment="Center"
+				VerticalContentAlignment="Center"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Content="Добавить заказ"
+				FontFamily="Comic Sans MS"
+				FontSize="20"
+				CornerRadius="10"
+				Height="50"
+				Width="200"
+				Foreground="Black"
+				Background="RGB(73, 140,81)"/>
+		</Grid>
+		
+	</Grid>
+</Window>

@@ -1,0 +1,115 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ProkatApp.Menu"
+        Title="Menu"
+		Background="White">
+	<Grid
+		ShowGridLines="True"
+		RowDefinitions="2*,2*,3*,2*"
+		ColumnDefinitions="*,*,*,*">
+		<Border
+			Grid.Row="0"
+			Grid.Column="0"
+			Grid.ColumnSpan="4"
+			Background="RGB(118, 227, 131)"/>
+		<Grid
+			ShowGridLines="False"
+			Grid.Row="0"
+			Grid.Column="0"
+			Grid.ColumnSpan="2"
+			RowDefinitions="*"
+			ColumnDefinitions="*,4*,2*">
+			<Border
+				Grid.ColumnSpan="3"
+				Background="RGB(73, 140,81)"
+				CornerRadius="10"
+				Margin="2"/>
+			<Image
+				Name="StaffImage"
+				Source=""
+				Grid.Row="0"
+				Grid.Column="0"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"/>
+			<TextBlock 
+				Name="FioTextBlock"
+				Text="Фамилия Имя Отчество"
+				Grid.Row="0"
+				Grid.Column="1"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"
+				Foreground="Black"/>
+			<TextBlock
+				Name="userRoleTextBlock"
+				Text="Роль"
+				Grid.Row="0"
+				Grid.Column="2"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Center"
+				Foreground="Black"/>
+		</Grid>
+		<Border
+			Grid.Row="2"
+			Grid.Column="0"
+			Grid.ColumnSpan="4"
+			Background="RGB(118, 227, 131)"
+			CornerRadius="10"/>
+		<Button
+			Name="configOrdersBtn"
+			Click="configOrdersBtn_click"
+			Grid.Row="2"
+			Grid.Column="0"
+			VerticalAlignment="Stretch"
+			HorizontalAlignment="Stretch"
+			VerticalContentAlignment="Center"
+			HorizontalContentAlignment="Center"
+			Margin="10"
+			CornerRadius="20"
+			Content="order"
+			Background="RGB(73, 140,81)"
+			Foreground="Black"/>
+		<Button
+			Name="entranceHistoryBtn"
+			Grid.Row="2"
+			Grid.Column="1"
+			VerticalAlignment="Stretch"
+			HorizontalAlignment="Stretch"
+			VerticalContentAlignment="Center"
+			HorizontalContentAlignment="Center"
+			Margin="10"
+			CornerRadius="20"
+			Content="история входа"
+			Background="RGB(73, 140,81)"
+			Foreground="Black"
+			/>
+		<Button
+			Name="acceptTovarBtn"
+			Grid.Row="2"
+			Grid.Column="2"
+			VerticalAlignment="Stretch"
+			HorizontalAlignment="Stretch"
+			VerticalContentAlignment="Center"
+			HorizontalContentAlignment="Center"
+			Margin="10"
+			CornerRadius="20"
+			Content="Принять товар"
+			Background="RGB(73, 140,81)"
+			Foreground="Black"/>
+		<Button
+			Name="createReportBtn"
+			Grid.Row="2"
+			Grid.Column="3"
+			VerticalAlignment="Stretch"
+			HorizontalAlignment="Stretch"
+			VerticalContentAlignment="Center"
+			HorizontalContentAlignment="Center"
+			Margin="10"
+			CornerRadius="20"
+			Content="Создать отчёт"
+			Background="RGB(73, 140,81)"
+			Foreground="Black"/>
+	</Grid>
+</Window>
