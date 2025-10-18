@@ -5,19 +5,19 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="ProkatApp.MainWindow"
         Title="ProkatApp"
-		Background="RGB(255, 255, 255)"
+		Background="#ffffff"
 		MinWidth="400">
 	<Grid ShowGridLines="False" RowDefinitions="30, *, 30" ColumnDefinitions="50, *, 50">
 		<Grid ShowGridLines="False" Grid.Row="1" Grid.Column="1" RowDefinitions="*,*,*,*" ColumnDefinitions="*,2*,*">
 			<Border Grid.Column="1"
 				   Grid.Row="0"
-				   Background="RGB(118, 227, 131)"
+				   Background="#76e383"
 				   Grid.RowSpan="4"
 				   CornerRadius="30"
 				   />
 			<Border Grid.Column="1"
 				   Grid.Row="0"
-				   Background="RGB(73, 140,81)"
+				   Background="#498c51"
 				   CornerRadius="30"
 				   />
 			<TextBlock 
@@ -88,7 +88,7 @@
 					Height="50"
 					Width="200"
 					Foreground="Black"
-					Background="RGB(73, 140,81)"/>
+					Background="#498c51"/>
 		</Grid>
 	</Grid>
 </Window>

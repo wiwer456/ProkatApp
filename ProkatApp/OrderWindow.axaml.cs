@@ -33,7 +33,7 @@ public partial class OrderWindow : Window
         services.Add((ServiceComboBox.SelectedItem as Service).ServiceId);
         listServicesTextBox.Text += $"{(ServiceComboBox.SelectedItem as Service).ServiceId} ";
     }
-    
+
     private void clearServicesBtn_click(object? s, Avalonia.Interactivity.RoutedEventArgs e)
     {
         services.Clear();
@@ -51,6 +51,8 @@ public partial class OrderWindow : Window
         string code = "123";
         int hours = int.Parse(rentTimeTextBox.Text) / 60;
         int minutes = int.Parse(rentTimeTextBox.Text) % 60;
+        int uid = (ClientComboBox.SelectedItem as UserDatum)!.UserDataId;
+        var tUser = con.Clients.OrderBy(c => c.ClientId).Where(c => c.UserDataId == uid).FirstOrDefault();
 
         if (orderCodeTextBox.Text != null)
         {
@@ -58,17 +60,18 @@ public partial class OrderWindow : Window
         }
         else
         {
-            code = $"{(ClientComboBox.SelectedItem as Client)!.ClientId}/{DateOnly.FromDateTime(DateTime.Now)}";
+            code = $"{tUser.ClientId}/{DateOnly.FromDateTime(DateTime.Now)}";
             orderCodeTextBox.Text = code;
         }
-        rentTimeTextBox.Text = (ClientComboBox.SelectedItem as Client)!.ClientId.ToString();
-        /*Order order = new Order()
+        //rentTimeTextBox.Text = tUser.ClientId.ToString();
+
+        Order order = new Order()
         {
             OrderCode = code,
-            OrderId = con.Orders.OrderBy(x=>x.OrderId).LastOrDefault().OrderId + 1,
+            OrderId = con.Orders.OrderBy(x => x.OrderId).LastOrDefault().OrderId + 1,
             DateCreate = DateOnly.FromDateTime(DateTime.Now),
             TimeCreate = TimeOnly.FromDateTime(DateTime.Now),
-            ClientId = (ClientComboBox.SelectedItem as Client)!.ClientId,
+            ClientId = tUser.ClientId,
             OrderStatusId = 1,
             DateClose = null,
             RentTime = new TimeOnly(hours, minutes)
@@ -86,7 +89,14 @@ public partial class OrderWindow : Window
             };
             con.UserServices.Add(userService);
             con.SaveChanges();
-        }*/
+        }
 
+    }
+
+    private void OrderBackBtn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        Window menu = new Menu();
+        menu.Show();
+        this.Close();
     }
 }

@@ -14,7 +14,7 @@
 			Grid.Row="0"
 			Grid.Column="0"
 			Grid.ColumnSpan="4"
-			Background="RGB(118, 227, 131)"/>
+			Background="#76e383"/>
 		<Grid
 			ShowGridLines="False"
 			Grid.Row="0"
@@ -24,7 +24,7 @@
 			ColumnDefinitions="*,4*,2*">
 			<Border
 				Grid.ColumnSpan="3"
-				Background="RGB(73, 140,81)"
+				Background="#498c51"
 				CornerRadius="10"
 				Margin="2"/>
 			<Image
@@ -55,11 +55,11 @@
 			Grid.Row="2"
 			Grid.Column="0"
 			Grid.ColumnSpan="4"
-			Background="RGB(118, 227, 131)"
+			Background="#76e383"
 			CornerRadius="10"/>
 		<Button
 			Name="configOrdersBtn"
-			Click="configOrdersBtn_click"
+			Click="configOrdersBtn_Click"
 			Grid.Row="2"
 			Grid.Column="0"
 			VerticalAlignment="Stretch"
@@ -69,10 +69,12 @@
 			Margin="10"
 			CornerRadius="20"
 			Content="order"
-			Background="RGB(73, 140,81)"
-			Foreground="Black"/>
+			Background="#498c51"
+			Foreground="Black"
+			/>
 		<Button
 			Name="entranceHistoryBtn"
+			Click="entranceHistoryBtn_Click"
 			Grid.Row="2"
 			Grid.Column="1"
 			VerticalAlignment="Stretch"
@@ -82,7 +84,7 @@
 			Margin="10"
 			CornerRadius="20"
 			Content="история входа"
-			Background="RGB(73, 140,81)"
+			Background="#498c51"
 			Foreground="Black"
 			/>
 		<Button
@@ -96,7 +98,7 @@
 			Margin="10"
 			CornerRadius="20"
 			Content="Принять товар"
-			Background="RGB(73, 140,81)"
+			Background="#498c51"
 			Foreground="Black"/>
 		<Button
 			Name="createReportBtn"
@@ -109,7 +111,7 @@
 			Margin="10"
 			CornerRadius="20"
 			Content="Создать отчёт"
-			Background="RGB(73, 140,81)"
+			Background="#498c51"
 			Foreground="Black"/>
 	</Grid>
 </Window>

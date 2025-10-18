@@ -6,10 +6,14 @@
         x:Class="ProkatApp.OrderWindow"
 		x:CompileBindings="False"
         Title="OrderWindow"
-		Background="RGB(255, 255, 255)">
-	<Grid ShowGridLines="False" RowDefinitions="30,*,30" ColumnDefinitions="*,3*,2*,*,*,*">
+		Background="#ffffff">
+	<Grid ShowGridLines="True" RowDefinitions="30,*,30" ColumnDefinitions="*,3*,2*,*,*,*">
+		<Button Content="Назад"
+				Name="OrderBackBtn"
+				Click="OrderBackBtn_Click"
+				Background="#498c51"/>
 		<Grid
-			ShowGridLines="True"
+			ShowGridLines="False"
 			Grid.Row="1"
 			Grid.Column="1"
 			Grid.ColumnSpan="4"
@@ -19,23 +23,23 @@
 				Grid.RowSpan="6"
 				Grid.Row="0"
 				Grid.Column="0"
-				Background="RGB(118, 227, 131)"
+				Background="#76e383"
 				CornerRadius="30"/>
 			<Border
 				Grid.Row="0"
 				Grid.Column="0"
-				Background="RGB(73, 140,81)"
+				Background="#498c51"
 				CornerRadius="30"/>
 			<Border
 				Grid.Row="0"
 				Grid.Column="1"
 				Grid.RowSpan="4"
-				Background="RGB(118, 227, 131)"
+				Background="#76e383"
 				CornerRadius="30"/>
 			<Border
 				Grid.Row="0"
 				Grid.Column="1"
-				Background="RGB(73, 140,81)"
+				Background="#498c51"
 				CornerRadius="30"/>
 			<TextBlock
 				Text="Список Услуг:"
@@ -61,7 +65,7 @@
 				Height="50"
 				Width="200"
 				Foreground="Black"
-				Background="RGB(73, 140,81)"/>
+				Background="#498c51"/>
 			<TextBox
 				Name="listServicesTextBox"
 				Grid.Column="1"
@@ -157,7 +161,7 @@
 				Height="50"
 				Width="200"
 				Foreground="Black"
-				Background="RGB(73, 140,81)"/>
+				Background="#498c51"/>
 		</Grid>
 		
 	</Grid>

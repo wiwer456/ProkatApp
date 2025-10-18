@@ -32,6 +32,9 @@ build_property.EnableCodeStyleSeverity =
 [C:/Users/Admin/source/repos/ProkatApp/ProkatApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Admin/source/repos/ProkatApp/ProkatApp/LoginHistoryWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Admin/source/repos/ProkatApp/ProkatApp/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

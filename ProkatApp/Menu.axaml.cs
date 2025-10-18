@@ -25,9 +25,16 @@ public partial class Menu : Window
         userRoleTextBlock.Text = role.RoleName;
     }
 
-    private void configOrdersBtn_click(object? s, RoutedEventArgs e)
+    private void configOrdersBtn_Click(object? s, RoutedEventArgs e)
     {
         Window window = new OrderWindow();
+        window.Show();
+        this.Close();
+    }
+
+    private void entranceHistoryBtn_Click(object? sender, RoutedEventArgs e)
+    {
+        Window window = new LoginHistoryWindow();
         window.Show();
         this.Close();
     }
