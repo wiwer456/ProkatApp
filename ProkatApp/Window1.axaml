@@ -2,17 +2,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" Height="500" Width="400"
-        x:Class="ProkatApp.LoginHistoryWindow"
-        Title="LoginHistoryWindow"
-        Background="#ffffff">
-    <Grid ShowGridLines="True"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ProkatApp.Window1"
+        Title="Window1">
+     <Grid ShowGridLines="True"
           RowDefinitions="*,*,*,*,*,*"
           ColumnDefinitions="*,*,*">
 		<Border Grid.ColumnSpan="3"
                 Background="#76e383"
                 CornerRadius="0,0,10,10"/>
-        <TextBlock Text="История Входа"
+        <TextBox Text="История Входа"
                    Grid.ColumnSpan="3"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
