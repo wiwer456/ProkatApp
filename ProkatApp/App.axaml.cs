@@ -1,6 +1,7 @@
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using System.Text;
 
 namespace ProkatApp
 {
@@ -9,13 +10,14 @@ namespace ProkatApp
         public override void Initialize()
         {
             AvaloniaXamlLoader.Load(this);
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
         }
 
         public override void OnFrameworkInitializationCompleted()
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                desktop.MainWindow = new Window1();
+                desktop.MainWindow = new OrderWindow();
             }
 
             base.OnFrameworkInitializationCompleted();

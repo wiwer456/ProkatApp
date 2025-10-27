@@ -44,7 +44,6 @@ namespace ProkatApp
             {
                 passwordTextBox.RevealPassword = true;
             }
-            
         }
     }
 }

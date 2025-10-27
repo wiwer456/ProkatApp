@@ -1,4 +1,4 @@
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Microsoft.EntityFrameworkCore;
@@ -48,7 +48,7 @@ public partial class OrderWindow : Window
     private void addOrderBtn_click(object? s, Avalonia.Interactivity.RoutedEventArgs e)
     {
         ProkatContext con = new ProkatContext();
-        string code = "123";
+        string code = "";
         int hours = int.Parse(rentTimeTextBox.Text) / 60;
         int minutes = int.Parse(rentTimeTextBox.Text) % 60;
         int uid = (ClientComboBox.SelectedItem as UserDatum)!.UserDataId;

@@ -32,7 +32,7 @@ build_property.EnableCodeStyleSeverity =
 [C:/Users/Admin/source/repos/ProkatApp/ProkatApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Admin/source/repos/ProkatApp/ProkatApp/LoginHistoryWindow.axaml]
+[C:/Users/Admin/source/repos/ProkatApp/ProkatApp/LogHistoryWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/Admin/source/repos/ProkatApp/ProkatApp/MainWindow.axaml]
@@ -42,7 +42,4 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/Admin/source/repos/ProkatApp/ProkatApp/OrderWindow.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/Admin/source/repos/ProkatApp/ProkatApp/Window1.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

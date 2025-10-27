@@ -1,0 +1,86 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:history="using:System.Data.Entity.Migrations.History"
+        xmlns:local="using:ProkatApp"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="using:ProkatApp.Models"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="700"
+        Width="600" Height="700"
+        x:Class="ProkatApp.LogHistoryWindow"
+        Title="LogHistoryWindow"
+        Background="#ffffff">
+    <Grid ShowGridLines="False"
+          RowDefinitions="*,*,*,*,*,*"
+          ColumnDefinitions="*,*,*">
+		<Border Grid.ColumnSpan="3"
+                Background="#76e383"
+                CornerRadius="0,0,10,10"/>
+        <TextBlock Text="История входа"
+                   Name="Tittle"
+				   FontFamily="Comic Sans MS"
+                   Grid.ColumnSpan="3"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="35"></TextBlock>
+        <Grid ShowGridLines="False"
+              Grid.Row="1"
+              Grid.ColumnSpan="3"
+              ColumnDefinitions="2*,*"
+              RowDefinitions="*,*">
+            <Border CornerRadius="10" Background="#76e383" Grid.RowSpan="2" Margin="5,10"/>
+            <Border CornerRadius="10" Background="#76e383" Grid.Column="1" Grid.RowSpan="2" Margin="5,10"/>
+			<TextBlock Text="Поиск по сотруднику:"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Bottom"
+                       FontSize="25"
+				       FontFamily="Comic Sans MS"
+                       Margin="10,10"/>
+            <TextBox Name="SearchTextBox"
+                     Watermark="Логин сотрудника"
+                     VerticalAlignment="Top"
+                     Margin="10,5"
+                     Grid.Row="1"/>
+            <TextBlock Text="Дата входа:"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Bottom"
+                       FontSize="25"
+                       Grid.Column="1"
+				       FontFamily="Comic Sans MS"
+                       Margin="10,10"/>
+            <ComboBox Name="FiltersComboBox"
+                      Grid.Column="1"
+                      Grid.Row="1"
+                      SelectionChanged="FiltersComboBox_SelectionChanged"
+                      VerticalAlignment="Top"
+                      HorizontalAlignment="Stretch"
+                      Margin="10,5"
+                      FontFamily="Comic Sans MS">
+                <ComboBoxItem Background="white" Content="По возрастанию"></ComboBoxItem>
+                <ComboBoxItem Content="По убыванию"></ComboBoxItem>
+            </ComboBox>
+        </Grid>
+        <ListBox Name="HistoryListBox"
+                 Background="lightgray"
+                 FontFamily="Comic Sans MS"
+                 Grid.Row="2"
+                 Grid.RowSpan="4"
+                 Grid.ColumnSpan="3"
+                 x:DataType="local:LogHistoryWindow"
+                 ItemsSource="{Binding historyRows}">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<Grid ColumnDefinitions="*,*,*"
+                          ShowGridLines="False"> 
+						<TextBlock Text="{Binding loginTime}"
+                                   Grid.Column="0"/>
+                        <TextBlock Text="{Binding login}"
+                                   Grid.Column="1"/>
+                        <TextBlock Text="{Binding loginStatus}"
+                                   Grid.Column="2"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

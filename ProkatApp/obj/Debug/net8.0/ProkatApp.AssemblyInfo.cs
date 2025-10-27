@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProkatApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f64a4831aaceaded26664e5ad581c8b416b8110")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ced3815cee5f7946f92d35a7aff8689df1eb8f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProkatApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProkatApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,4 @@
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
@@ -34,7 +34,7 @@ public partial class Menu : Window
 
     private void entranceHistoryBtn_Click(object? sender, RoutedEventArgs e)
     {
-        Window window = new LoginHistoryWindow();
+        Window window = new LogHistoryWindow();
         window.Show();
         this.Close();
     }
