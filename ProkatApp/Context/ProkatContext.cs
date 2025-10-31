@@ -20,6 +20,8 @@ public partial class ProkatContext : DbContext
 
     public virtual DbSet<EntranceStatus> EntranceStatuses { get; set; }
 
+    public virtual DbSet<LoginHistory> LoginHistories { get; set; }
+
     public virtual DbSet<Order> Orders { get; set; }
 
     public virtual DbSet<OrderStatus> OrderStatuses { get; set; }
@@ -68,6 +70,30 @@ public partial class ProkatContext : DbContext
 
             entity.Property(e => e.EntranceStatusId).HasColumnName("entranceStatus_id");
             entity.Property(e => e.StatusTittle).HasColumnName("statusTittle");
+        });
+
+        modelBuilder.Entity<LoginHistory>(entity =>
+        {
+            entity.HasKey(e => e.LoginHistoryId).HasName("LoginHistory_pkey");
+
+            entity.ToTable("LoginHistory");
+
+            entity.Property(e => e.LoginHistoryId).HasColumnName("loginHistory_id");
+            entity.Property(e => e.EntranceStatusId).HasColumnName("entranceStatus_id");
+            entity.Property(e => e.LoginTime)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("loginTime");
+            entity.Property(e => e.UserDataId).HasColumnName("userData_id");
+
+            entity.HasOne(d => d.EntranceStatus).WithMany(p => p.LoginHistories)
+                .HasForeignKey(d => d.EntranceStatusId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("LoginHistory_entranceStatus_id_fkey");
+
+            entity.HasOne(d => d.UserData).WithMany(p => p.LoginHistories)
+                .HasForeignKey(d => d.UserDataId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("LoginHistory_userData_id_fkey");
         });
 
         modelBuilder.Entity<Order>(entity =>
@@ -131,15 +157,8 @@ public partial class ProkatContext : DbContext
             entity.HasKey(e => e.StaffId).HasName("Staff_pkey");
 
             entity.Property(e => e.StaffId).HasColumnName("staff_id");
-            entity.Property(e => e.EntranceStatusId).HasColumnName("entranceStatus_id");
-            entity.Property(e => e.LastEntrance)
-                .HasColumnType("timestamp without time zone")
-                .HasColumnName("lastEntrance");
+            entity.Property(e => e.ImagePath).HasColumnName("imagePath");
             entity.Property(e => e.UserDataId).HasColumnName("userData_id");
-
-            entity.HasOne(d => d.EntranceStatus).WithMany(p => p.Staff)
-                .HasForeignKey(d => d.EntranceStatusId)
-                .HasConstraintName("Staff_entranceStatus_id_fkey");
 
             entity.HasOne(d => d.UserData).WithMany(p => p.Staff)
                 .HasForeignKey(d => d.UserDataId)

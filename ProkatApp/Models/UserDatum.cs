@@ -17,6 +17,8 @@ public partial class UserDatum
 
     public virtual ICollection<Client> Clients { get; set; } = new List<Client>();
 
+    public virtual ICollection<LoginHistory> LoginHistories { get; set; } = new List<LoginHistory>();
+
     public virtual Role Role { get; set; } = null!;
 
     public virtual ICollection<Staff> Staff { get; set; } = new List<Staff>();

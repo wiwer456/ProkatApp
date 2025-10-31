@@ -29,28 +29,64 @@ public partial class LogHistoryWindow : Window
     public void LoadHistory(string? sort = null)
     {
         var context = new ProkatContext();
-        historyRows = new ObservableCollection<HistoryRow>(context.Staff.Include(u => u.UserData).Include(u => u.EntranceStatus)
+        
+        /*historyRows = new ObservableCollection<HistoryRow>(context.LoginHistories.Include(u => u.UserData).Include(u => u.EntranceStatus)
             .Select(u => new HistoryRow
             {
-                loginTime = /*"1"*/ u.LastEntrance.ToString(),
+                loginTime = u.LoginTime.ToString(),
                 login = u.UserData.Login,
-                loginStatus = /*"1"*/u.EntranceStatus.StatusTittle
+                loginStatus = u.EntranceStatus.StatusTittle
             })
-            .ToList());
-        if (sort == "desc")
+            .ToList());*/
+        if (FiltersComboBox.SelectedItem.ToString() == "По возрастанию")
         {
-            historyRows.OrderBy(h => h.loginTime);
+            historyRows = new ObservableCollection<HistoryRow>(context.LoginHistories.Include(u => u.UserData).Include(u => u.EntranceStatus)
+            .Select(u => new HistoryRow
+            {
+                loginTime = u.LoginTime.ToString(),
+                login = u.UserData.Login,
+                loginStatus = u.EntranceStatus.StatusTittle
+            })
+            .ToList()
+            .OrderByDescending(h => h.loginTime));
+        }
+        else
+        {
+            historyRows = new ObservableCollection<HistoryRow>(context.LoginHistories.Include(u => u.UserData).Include(u => u.EntranceStatus)
+            .Select(u => new HistoryRow
+            {
+                loginTime = u.LoginTime.ToString(),
+                login = u.UserData.Login,
+                loginStatus = u.EntranceStatus.StatusTittle
+            })
+            .ToList()
+            .OrderBy(h => h.loginTime));
         }
     }
+
+    /*public void ApplyFilters()
+    {
+        var temp = historyRows.AsQueryable();
+
+        
+
+        historyRows.Clear();
+        foreach(var t in temp)
+        {
+            historyRows.Add(t);
+        }
+    }*/
 
     private void FiltersComboBox_SelectionChanged(object? sender, SelectionChangedEventArgs e)
     {
         if (FiltersComboBox.SelectedIndex == 1)
         {
-            SearchTextBox.Text = "По убыванию";
             LoadHistory("desc");
-            DataContext = this;
         }
-
+        if (FiltersComboBox.SelectedIndex == 0)
+        {
+            LoadHistory();
+        }
+        HistoryListBox.ItemsSource = historyRows;
     }
 }

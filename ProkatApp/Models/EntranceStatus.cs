@@ -9,5 +9,5 @@ public partial class EntranceStatus
 
     public string StatusTittle { get; set; } = null!;
 
-    public virtual ICollection<Staff> Staff { get; set; } = new List<Staff>();
+    public virtual ICollection<LoginHistory> LoginHistories { get; set; } = new List<LoginHistory>();
 }
