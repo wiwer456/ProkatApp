@@ -38,4 +38,11 @@ public partial class Menu : Window
         window.Show();
         this.Close();
     }
+
+    private void acceptTovarBtn_Click(object? sender, RoutedEventArgs e)
+    {
+        Window ol = new OrderListWindow();
+        ol.Show();
+        this.Close();
+    }
 }

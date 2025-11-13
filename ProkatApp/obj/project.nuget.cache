@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ytxV76N4wX8=",
+  "dgSpecHash": "KckmZrqGltQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\source\\repos\\ProkatApp\\ProkatApp\\ProkatApp.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\avalonia.themes.simple\\11.3.0\\avalonia.themes.simple.11.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\avalonia.win32\\11.3.0\\avalonia.win32.11.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\avalonia.x11\\11.3.0\\avalonia.x11.11.3.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\dialoghost.avalonia\\0.8.1\\dialoghost.avalonia.0.8.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\entityframework\\6.5.1\\entityframework.6.5.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\harfbuzzsharp\\7.3.0.3\\harfbuzzsharp.7.3.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\7.3.0.3\\harfbuzzsharp.nativeassets.linux.7.3.0.3.nupkg.sha512",
@@ -26,6 +27,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\harfbuzzsharp.nativeassets.webassembly\\7.3.0.3\\harfbuzzsharp.nativeassets.webassembly.7.3.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\7.3.0.3\\harfbuzzsharp.nativeassets.win32.7.3.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\messagebox.avalonia\\3.2.0\\messagebox.avalonia.3.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microcom.runtime\\0.11.0\\microcom.runtime.0.11.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.build.framework\\17.8.3\\microsoft.build.framework.17.8.3.nupkg.sha512",

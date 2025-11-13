@@ -10,12 +10,16 @@
         x:Class="ProkatApp.LogHistoryWindow"
         Title="LogHistoryWindow"
         Background="#ffffff">
-    <Grid ShowGridLines="False"
+    <Grid ShowGridLines="True"
           RowDefinitions="*,*,*,*,*,*"
           ColumnDefinitions="*,*,*">
 		<Border Grid.ColumnSpan="3"
                 Background="#76e383"
                 CornerRadius="0,0,10,10"/>
+        <Button Content="Назад"
+				Name="OrderBackBtn"
+				Click="HistoryBackBtn_Click"
+				Background="#498c51"/>
         <TextBlock Text="История входа"
                    Name="Tittle"
 				   FontFamily="Comic Sans MS"
@@ -40,6 +44,7 @@
                      Watermark="Логин сотрудника"
                      VerticalAlignment="Top"
                      Margin="10,5"
+                     TextChanged="SearchTextBox_TextChanged"
                      Grid.Row="1"/>
             <TextBlock Text="Дата входа:"
                        HorizontalAlignment="Center"

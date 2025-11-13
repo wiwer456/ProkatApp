@@ -1,0 +1,98 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="using:ProkatApp"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ProkatApp.OrderListWindow"
+        Title="OrderListWindow">
+    <Grid ShowGridLines="False" ColumnDefinitions="*,2*,2*,2*,*" RowDefinitions="*,*,2*,2*,2*" Background="white">
+        <Button Content="Назад"
+				Name="OrderBackBtn"
+                Click="OrderBackBtn_Click"
+				Background="#498c51"/>
+        <Button Content="Закрыть заказ"
+				Name="OrderCloseBtn"
+                Click="OrderCloseBtn_Click"
+				Background="#498c51"
+                Grid.Column="4"/>
+        <Button Content="Принять заказ"
+				Name="OrderConfirmBtn"
+                HorizontalAlignment="Center"
+                Click="OrderConfirmBtn_Click"
+                Grid.Column="3"/>
+		<Grid ColumnDefinitions="*,*,*,*,*,*" ShowGridLines="False" Grid.ColumnSpan="5" Grid.Row="1" Background="#76e383">
+            <TextBlock 
+                Text="Код заказа"
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+            <TextBlock 
+                Text="Время оформления"
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+            <TextBlock 
+                Text="ФИО"
+                Grid.Column="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+            <TextBlock 
+                Text="Статус заказа   "
+                Grid.Column="3"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+            <TextBlock 
+                Text="Время аренды   "
+                Grid.Column="4"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+            <TextBlock 
+                Text="Дата закрытия   "
+                Grid.Column="5"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+        </Grid>
+        <ListBox
+            Name="OrdersListbox"
+            Grid.Column="0"
+            Grid.Row="2"
+            Grid.ColumnSpan="5"
+            Grid.RowSpan="3"
+            Background="white"
+            x:DataType="local:OrderListWindow"
+            ItemsSource="{Binding orderTemplates}"
+            SelectedItem="{Binding selectedOrder}">
+			<ListBox.ItemTemplate>
+				<DataTemplate >
+					<Grid ColumnDefinitions="*,*,*,*,*,*" ShowGridLines="True">
+						<TextBlock
+                            Text="{Binding orderCode}"
+                            TextWrapping="Wrap"/>
+                        <TextBlock
+                            Grid.Column="1"
+                            Margin="5"
+                            Text="{Binding orderDateTime}"/>
+                        <TextBlock
+                            Grid.Column="2"
+                            Margin="5"
+                            Text="{Binding orderClient}"
+                            TextWrapping="Wrap"/>
+                        <TextBlock
+                            Grid.Column="3"
+                            Margin="5"
+                            Text="{Binding orderStatus}"/>
+                        <TextBlock
+                            Grid.Column="4"
+                            Margin="5"
+                            Text="{Binding orderRentTime}"/>
+                        <TextBlock
+                            Grid.Column="5"
+                            Margin="5"
+                            Text="{Binding orderDateClose}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

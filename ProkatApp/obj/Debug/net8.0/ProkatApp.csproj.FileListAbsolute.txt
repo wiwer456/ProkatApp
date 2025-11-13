@@ -186,3 +186,6 @@ C:\Users\Admin\source\repos\ProkatApp\ProkatApp\obj\Debug\net8.0\refint\ProkatAp
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\obj\Debug\net8.0\ProkatApp.pdb
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\obj\Debug\net8.0\ProkatApp.genruntimeconfig.cache
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\obj\Debug\net8.0\ref\ProkatApp.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\DialogHost.Avalonia.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\MsBox.Avalonia.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\ProkatApp.dll.config

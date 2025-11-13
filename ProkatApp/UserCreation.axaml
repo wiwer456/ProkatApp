@@ -1,0 +1,110 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ProkatApp.UserCreation"
+        Title="UserCreation">
+   <Grid ShowGridLines="True" Background="white" RowDefinitions="*, *, *, *, *, *, *, *" ColumnDefinitions="*,2*, 2*,*">
+       <Button
+            Name="UserCBackBtn"
+            Click="UserCBackBtn_Click"
+            Content="Назад"
+            Background="#498C51"/> 
+        <Border 
+            Background="#76e383" 
+            Grid.Column="1" 
+            Grid.Row="1" 
+            Grid.RowSpan="6"
+            Grid.ColumnSpan="2"/>
+       <TextBlock  
+            Grid.Row="1" 
+            Grid.Column="1" 
+            FontWeight="SemiBold"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            FontSize="25"
+            Text="Новый пользователь"/>
+        <TextBox 
+            Name="FIOTextBox" 
+            Watermark="ФИО" 
+            Grid.Column="1" 
+            Grid.Row="2" 
+            Margin="10" 
+            VerticalAlignment="Stretch" 
+            HorizontalAlignment="Stretch"/>
+        <DatePicker 
+            Name="DateBirthPicker" 
+            Grid.Column="2" 
+            Grid.Row="2" 
+            Margin="10" 
+            VerticalAlignment="Stretch" 
+            HorizontalAlignment="Stretch"
+            />
+        <TextBox  
+            Name="EmailTextBox" 
+            Watermark="Email" 
+            Grid.Column="1" 
+            Grid.Row="3" 
+            Margin="10" 
+            VerticalAlignment="Stretch" 
+            HorizontalAlignment="Stretch"/>
+        <TextBox 
+            Name="PasswordTextBox" 
+            Watermark="Пароль" 
+            Grid.Column="2" 
+            Grid.Row="3" 
+            Margin="10" 
+            VerticalAlignment="Stretch" 
+            HorizontalAlignment="Stretch"/>
+        <TextBox 
+            Name="PasSeriyaTextBox" 
+            Watermark="Серия паспорта" 
+            Grid.Column="1" 
+            Grid.Row="4" 
+            Margin="10" 
+            VerticalAlignment="Stretch" 
+            HorizontalAlignment="Stretch"/>
+        <TextBox 
+            Name="PasNumberTextBox" 
+            Watermark="Номер паспорта" 
+            Grid.Column="2" 
+            Grid.Row="4" 
+            Margin="10" 
+            VerticalAlignment="Stretch" 
+            HorizontalAlignment="Stretch"/>
+        
+        <TextBox 
+            Name="AdresTextBox" 
+            Watermark="Адрес" 
+            Grid.Column="1" 
+            Grid.Row="5" 
+            Margin="10" 
+            VerticalAlignment="Stretch" 
+            HorizontalAlignment="Stretch"/>
+        <TextBox 
+            Name="IndexTextBox" 
+            Watermark="Почтовый индекс" 
+            Grid.Column="2" 
+            Grid.Row="5" 
+            Margin="10" 
+            VerticalAlignment="Stretch" 
+            HorizontalAlignment="Stretch"/>
+        <Button 
+            Name="AddClient"
+            Click="AddClient_Click"
+            Grid.Column="1"
+            Content="Сохранить" 
+            HorizontalContentAlignment="Center" 
+            Grid.Row="6" 
+            Grid.ColumnSpan="2" 
+            Background="#498C51" 
+            FontFamily="Comic Sans MS" 
+            HorizontalAlignment="Stretch" 
+            Margin="100, 10" 
+            VerticalAlignment="Stretch"/>
+  </Grid>
+</Window>
+
+

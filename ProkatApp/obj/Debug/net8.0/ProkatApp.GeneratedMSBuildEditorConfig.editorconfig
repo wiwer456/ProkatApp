@@ -41,5 +41,14 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/Admin/source/repos/ProkatApp/ProkatApp/Menu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Admin/source/repos/ProkatApp/ProkatApp/OrderListWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Admin/source/repos/ProkatApp/ProkatApp/OrderWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Admin/source/repos/ProkatApp/ProkatApp/ServiceCreation.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Admin/source/repos/ProkatApp/ProkatApp/UserCreation.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

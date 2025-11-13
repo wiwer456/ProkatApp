@@ -1,11 +1,13 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Interactivity;
+using MsBox.Avalonia;
 using ProkatApp.Context;
 using ProkatApp.Models;
 using System.Data.Entity;
 using System.Linq;
 using System.Runtime.InteropServices.Marshalling;
 using Tmds.DBus.Protocol;
+using ProkatApp.Properties;
 
 namespace ProkatApp
 {
@@ -19,17 +21,20 @@ namespace ProkatApp
         {
             ProkatContext context = new ProkatContext();
             var user = context.UserData.Include(x => x.Staff).FirstOrDefault(x => x.Login == loginTextBox.Text && x.Password == passwordTextBox.Text);
-            LoginHistory loginHistory = new LoginHistory()
+            if (user != null)
             {
-
-                UserDataId = user.UserDataId,
-                LoginTime = System.DateTime.Now,
-                EntranceStatusId = stat
-            };
-            return loginHistory;
+                LoginHistory loginHistory = new LoginHistory
+                {
+                    UserDataId = user.UserDataId,
+                    LoginTime = System.DateTime.Now,
+                    EntranceStatusId = stat
+                };
+                return loginHistory;
+            }
+            return null;
         }
 
-        private void LoginBtn_click(object? s, Avalonia.Interactivity.RoutedEventArgs e)
+        private async void LoginBtn_click(object? s, Avalonia.Interactivity.RoutedEventArgs e)
         {
             ProkatContext context = new ProkatContext();
             var user = context.UserData.Include(x=>x.Staff).FirstOrDefault(x => x.Login == loginTextBox.Text && x.Password == passwordTextBox.Text);
@@ -37,15 +42,18 @@ namespace ProkatApp
             if (user != null) 
             {
                 Window window = new Menu(context.Staff.First(x => x.UserDataId == user.UserDataId));
-                context.LoginHistories.Add(CreateLogHistory(1));
+                /*context.LoginHistories.Add(CreateLogHistory(1));*/
+                var box = MessageBoxManager.GetMessageBoxStandard("Успех", $"Добро пожаловать, {user.Fio}");
+                var result = await box.ShowAsync();
                 context.SaveChanges();
+                Settings.Default.UserD_Id = user.UserDataId;
                 window.Show();
                 this.Close();
             }
             else 
             {
-                passwordTextBox.Text = "не найден";
-                context.LoginHistories.Add(CreateLogHistory(2));
+                var box = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Пользователь не найден");
+                var result = await box.ShowAsync();
                 context.SaveChanges();
             }
         }
@@ -60,5 +68,6 @@ namespace ProkatApp
                 passwordTextBox.RevealPassword = true;
             }
         }
+
     }
 }

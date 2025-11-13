@@ -1,4 +1,4 @@
-<Window xmlns="https://github.com/avaloniaui"
+﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -7,13 +7,13 @@
 		x:CompileBindings="False"
         Title="OrderWindow"
 		Background="#ffffff">
-	<Grid ShowGridLines="True" RowDefinitions="30,*,30" ColumnDefinitions="*,3*,2*,*,*,*">
+	<Grid ShowGridLines="False" RowDefinitions="30,*,30" ColumnDefinitions="*,3*,2*,*,*,*">
 		<Button Content="Назад"
 				Name="OrderBackBtn"
 				Click="OrderBackBtn_Click"
 				Background="#498c51"/>
 		<Grid
-			ShowGridLines="False"
+			ShowGridLines="True"
 			Grid.Row="1"
 			Grid.Column="1"
 			Grid.ColumnSpan="4"
@@ -54,7 +54,6 @@
 				Grid.Column="1"
 				Name="clearServicesBtn"
 				Click="clearServicesBtn_click"
-				HorizontalContentAlignment="Center"
 				VerticalContentAlignment="Center"
 				HorizontalAlignment="Center"
 				VerticalAlignment="Center"
@@ -75,6 +74,7 @@
 				VerticalContentAlignment="Center"
 				HorizontalContentAlignment="Center"
 				FontSize="20"
+				IsReadOnly="True"
 				Foreground="White"
 				CornerRadius="10"/>
 			<TextBlock
@@ -94,24 +94,32 @@
 				FontSize="20"
 				Foreground="White"
 				CornerRadius="10"/>
-			<ComboBox
-				Name="ClientComboBox"
-				Grid.Row="2"
-				VerticalAlignment="Stretch"
-				HorizontalAlignment="Stretch"
-				HorizontalContentAlignment="Center"
-				Margin="10"
-				PlaceholderText="Клиент"
-				FontSize="20"
-				CornerRadius="10"
-				PlaceholderForeground="LightGray">
-				<ComboBox.ItemTemplate>
-					<DataTemplate>
-						<TextBlock Text="{Binding Fio}"></TextBlock>
-					</DataTemplate>
-				</ComboBox.ItemTemplate>
-			</ComboBox>
-			<ComboBox
+			<Grid Grid.Row="2" ShowGridLines="False" ColumnDefinitions="6*,*">
+				<AutoCompleteBox
+					Name="ClientComboBox"
+					VerticalAlignment="Stretch"
+					HorizontalAlignment="Stretch"
+					Margin="10"
+					FontSize="20"
+					FilterMode="Contains"
+					MinimumPrefixLength="1"
+					Watermark="Клиент"
+					ValueMemberBinding="{Binding Fio}"
+					CornerRadius="10"/>
+				<Button
+					Name="AddClientBtn"
+					Click="AddClientBtn_Click"
+					Grid.Column="1"
+					HorizontalAlignment="Stretch"
+					VerticalAlignment="Stretch"
+					Background="#498c51"
+					Margin="5, 15"
+					Content="+"
+					VerticalContentAlignment="Center"
+					HorizontalContentAlignment="Center"/>
+			</Grid>
+			<Grid Grid.Row="3" ShowGridLines="False" ColumnDefinitions="6*,*,*">
+				<ComboBox
 				Name="ServiceComboBox"
 				Grid.Row="3"
 				VerticalAlignment="Stretch"
@@ -122,20 +130,37 @@
 				HorizontalContentAlignment="Center"
 				FontSize="20"
 				CornerRadius="10"
-				PlaceholderForeground="LightGray"
-				SelectionChanged="ServiceCB_SelectionChanged">
+				PlaceholderForeground="LightGray">
 				<ComboBox.ItemTemplate>
 					<DataTemplate>
 						<TextBlock Text="{Binding ServiceTittle}"></TextBlock>
 					</DataTemplate>
 				</ComboBox.ItemTemplate>
 			</ComboBox>
-			<!--><Button
+			<Button
 				Name="addServiceBtn"
-				Grid.Column="0"
-				Grid.Row="3"
+				Grid.Column="1"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Stretch"
+				Background="#498c51"
+				Margin="5, 15"
 				Content="+"
-				Click="addServiceBtn_click"/><-->
+				VerticalContentAlignment="Center"
+				HorizontalContentAlignment="Center"
+				Click="ServiceSelectionBtn_click"/>
+			<Button
+				Name="CreateServiceBtn"
+				Grid.Column="2"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Stretch"
+				Background="#498c51"
+				Margin="5, 15"
+				Content="+'"
+				VerticalContentAlignment="Center"
+				HorizontalContentAlignment="Center"
+				Click="CreateServiceBtn_Click"/>
+			</Grid>
+			
 			<TextBox
 				Name="rentTimeTextBox"
 				Grid.Row="4"
