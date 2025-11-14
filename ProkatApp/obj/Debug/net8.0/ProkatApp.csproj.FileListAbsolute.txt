@@ -189,3 +189,16 @@ C:\Users\Admin\source\repos\ProkatApp\ProkatApp\obj\Debug\net8.0\ref\ProkatApp.d
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\DialogHost.Avalonia.dll
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\MsBox.Avalonia.dll
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\ProkatApp.dll.config
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Add.png
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\logo.ico
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\logo.png
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Беляева.jpeg
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Иванов.jpeg
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Игнатов.jpg
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Миронов.jpeg
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Петров.jpeg
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Смирнова.jpeg
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Стрелков.jpeg
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Федоров.jpeg
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Хохлов.jpeg
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Ширяев.jpeg

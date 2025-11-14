@@ -10,7 +10,7 @@
         x:Class="ProkatApp.LogHistoryWindow"
         Title="LogHistoryWindow"
         Background="#ffffff">
-    <Grid ShowGridLines="True"
+    <Grid ShowGridLines="False"
           RowDefinitions="*,*,*,*,*,*"
           ColumnDefinitions="*,*,*">
 		<Border Grid.ColumnSpan="3"
@@ -61,7 +61,7 @@
                       HorizontalAlignment="Stretch"
                       Margin="10,5"
                       FontFamily="Comic Sans MS">
-                <ComboBoxItem Background="white" Content="По возрастанию"></ComboBoxItem>
+                <ComboBoxItem Content="По возрастанию"></ComboBoxItem>
                 <ComboBoxItem Content="По убыванию"></ComboBoxItem>
             </ComboBox>
         </Grid>

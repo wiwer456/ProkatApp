@@ -29,7 +29,6 @@
 				Margin="2"/>
 			<Image
 				Name="StaffImage"
-				Source=""
 				Grid.Row="0"
 				Grid.Column="0"
 				VerticalAlignment="Center"
@@ -51,6 +50,13 @@
 				HorizontalAlignment="Center"
 				Foreground="Black"/>
 		</Grid>
+		<Button
+			Name="MenuBackBtn"
+			Click="MenuBackBtn_Click"
+			Grid.Column="3"
+			VerticalAlignment="Top"
+			HorizontalAlignment="Right"
+			Content="Выйти"/>
 		<Border
 			Grid.Row="2"
 			Grid.Column="0"
@@ -66,27 +72,14 @@
 			HorizontalAlignment="Stretch"
 			Margin="10"
 			CornerRadius="20"
-			Content="order"
-			Background="#498c51"
-			Foreground="Black"
-			/>
-		<Button
-			Name="entranceHistoryBtn"
-			Click="entranceHistoryBtn_Click"
-			Grid.Row="2"
-			Grid.Column="1"
-			VerticalAlignment="Stretch"
-			HorizontalAlignment="Stretch"
-			Margin="10"
-			CornerRadius="20"
-			Content="история входа"
+			Content="Сформировать заказ"
 			Background="#498c51"
 			Foreground="Black"
 			/>
 		<Button
 			Name="acceptTovarBtn"
 			Grid.Row="2"
-			Grid.Column="2"
+			Grid.Column="1"
 			VerticalAlignment="Stretch"
 			HorizontalAlignment="Stretch"
 			Click="acceptTovarBtn_Click"
@@ -95,6 +88,19 @@
 			Content="Принять товар"
 			Background="#498c51"
 			Foreground="Black"/>
+		<Button
+			Name="entranceHistoryBtn"
+			Click="entranceHistoryBtn_Click"
+			Grid.Row="2"
+			Grid.Column="2"
+			VerticalAlignment="Stretch"
+			HorizontalAlignment="Stretch"
+			Margin="10"
+			CornerRadius="20"
+			Content="История входа"
+			Background="#498c51"
+			Foreground="Black"
+			/>
 		<Button
 			Name="createReportBtn"
 			Grid.Row="2"

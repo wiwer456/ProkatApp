@@ -16,7 +16,8 @@
             Grid.Column="1" 
             Grid.Row="1" 
             Grid.RowSpan="6"
-            Grid.ColumnSpan="2"/>
+            Grid.ColumnSpan="2"
+            CornerRadius="20"/>
        <TextBlock  
             Grid.Row="1" 
             Grid.Column="1" 

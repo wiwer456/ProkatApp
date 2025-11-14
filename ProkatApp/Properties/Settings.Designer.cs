@@ -34,5 +34,28 @@ namespace ProkatApp.Properties {
                 this["UserD_Id"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int attempt_count {
+            get {
+                return ((int)(this["attempt_count"]));
+            }
+            set {
+                this["attempt_count"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime unban_time {
+            get {
+                return ((global::System.DateTime)(this["unban_time"]));
+            }
+            set {
+                this["unban_time"] = value;
+            }
+        }
     }
 }
