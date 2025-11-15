@@ -1,3 +1,4 @@
+C:\Users\Admin\.nuget\packages\aspose.pdf\25.11.0\lib\net8.0\Aspose.PDF.dll
 C:\Users\Admin\.nuget\packages\avalonia\11.3.0\ref\net8.0\Avalonia.Base.dll
 C:\Users\Admin\.nuget\packages\avalonia.controls.colorpicker\11.3.0\lib\net8.0\Avalonia.Controls.ColorPicker.dll
 C:\Users\Admin\.nuget\packages\avalonia\11.3.0\ref\net8.0\Avalonia.Controls.dll
@@ -36,6 +37,7 @@ C:\Users\Admin\.nuget\packages\microsoft.extensions.caching.memory\9.0.9\lib\net
 C:\Users\Admin\.nuget\packages\microsoft.extensions.configuration.abstractions\9.0.9\lib\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\Admin\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\9.0.9\lib\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Admin\.nuget\packages\microsoft.extensions.dependencyinjection\9.0.9\lib\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Admin\.nuget\packages\microsoft.extensions.dependencymodel\9.0.9\lib\net8.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Admin\.nuget\packages\microsoft.extensions.logging.abstractions\9.0.9\lib\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Admin\.nuget\packages\microsoft.extensions.logging\9.0.9\lib\net8.0\Microsoft.Extensions.Logging.dll
 C:\Users\Admin\.nuget\packages\microsoft.extensions.options\9.0.9\lib\net8.0\Microsoft.Extensions.Options.dll
@@ -44,10 +46,11 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\Micros
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\Microsoft.VisualBasic.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\Microsoft.Win32.Primitives.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\Microsoft.Win32.Registry.dll
-C:\Users\Admin\.nuget\packages\microsoft.win32.systemevents\6.0.0\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Admin\.nuget\packages\microsoft.win32.systemevents\8.0.0\lib\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Admin\.nuget\packages\messagebox.avalonia\3.2.0\lib\netstandard2.0\MsBox.Avalonia.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\mscorlib.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\netstandard.dll
+C:\Users\Admin\.nuget\packages\newtonsoft.json\13.0.3\lib\net6.0\Newtonsoft.Json.dll
 C:\Users\Admin\.nuget\packages\npgsql\9.0.3\lib\net8.0\Npgsql.dll
 C:\Users\Admin\.nuget\packages\npgsql.entityframeworkcore.postgresql\9.0.4\lib\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\Admin\.nuget\packages\skiasharp\2.88.9\lib\net6.0\SkiaSharp.dll
@@ -65,7 +68,7 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.ComponentModel.EventBasedAsync.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.ComponentModel.Primitives.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.ComponentModel.TypeConverter.dll
-C:\Users\Admin\.nuget\packages\system.configuration.configurationmanager\6.0.1\lib\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Admin\.nuget\packages\system.configuration.configurationmanager\8.0.0\lib\net8.0\System.Configuration.ConfigurationManager.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Configuration.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Console.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Core.dll
@@ -76,7 +79,9 @@ C:\Users\Admin\.nuget\packages\system.data.sqlclient\4.8.6\ref\netcoreapp2.1\Sys
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Diagnostics.Contracts.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Diagnostics.Debug.dll
 C:\Users\Admin\.nuget\packages\system.diagnostics.diagnosticsource\9.0.9\lib\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Admin\.nuget\packages\system.diagnostics.eventlog\8.0.0\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\.nuget\packages\system.diagnostics.performancecounter\8.0.0\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Diagnostics.Process.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Diagnostics.StackTrace.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Diagnostics.TextWriterTraceListener.dll
@@ -84,7 +89,7 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Diagnostics.TraceSource.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Diagnostics.Tracing.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.dll
-C:\Users\Admin\.nuget\packages\system.drawing.common\6.0.0\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Admin\.nuget\packages\system.drawing.common\8.0.0\lib\net8.0\System.Drawing.Common.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Drawing.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Drawing.Primitives.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Dynamic.Runtime.dll
@@ -172,11 +177,12 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Security.Cryptography.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Security.Cryptography.Encoding.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Security.Cryptography.OpenSsl.dll
+C:\Users\Admin\.nuget\packages\system.security.cryptography.pkcs\8.0.0\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Security.Cryptography.Primitives.dll
-C:\Users\Admin\.nuget\packages\system.security.cryptography.protecteddata\6.0.0\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Admin\.nuget\packages\system.security.cryptography.protecteddata\8.0.0\lib\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Security.Cryptography.X509Certificates.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Security.dll
-C:\Users\Admin\.nuget\packages\system.security.permissions\6.0.0\lib\net6.0\System.Security.Permissions.dll
+C:\Users\Admin\.nuget\packages\system.security.permissions\8.0.0\lib\net8.0\System.Security.Permissions.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Security.Principal.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Security.Principal.Windows.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Security.SecureString.dll
@@ -185,8 +191,8 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Text.Encoding.CodePages.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Text.Encoding.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Text.Encoding.Extensions.dll
-C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Text.Encodings.Web.dll
-C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Text.Json.dll
+C:\Users\Admin\.nuget\packages\system.text.encodings.web\9.0.9\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Admin\.nuget\packages\system.text.json\9.0.9\lib\net8.0\System.Text.Json.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Text.RegularExpressions.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Threading.Channels.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Threading.dll
@@ -204,7 +210,7 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Web.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Web.HttpUtility.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Windows.dll
-C:\Users\Admin\.nuget\packages\system.windows.extensions\6.0.0\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Admin\.nuget\packages\system.windows.extensions\8.0.0\lib\net8.0\System.Windows.Extensions.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Xml.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Xml.Linq.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.16\ref\net8.0\System.Xml.ReaderWriter.dll

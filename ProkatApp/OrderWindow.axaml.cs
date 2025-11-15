@@ -12,6 +12,9 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using Tmds.DBus.Protocol;
+using Aspose.Pdf;
+using Aspose.Pdf.Text;
+using System.IO;
 
 namespace ProkatApp;
 
@@ -21,15 +24,15 @@ public partial class OrderWindow : Window
     {
         InitializeComponent();
         GetServices();
+        //CreateReport();
     }
 
-    private async Task GetServices()
+    private void GetServices()
     {
         ProkatContext con = new ProkatContext();
         ServiceComboBox.ItemsSource = con.Services.ToList();
         ClientComboBox.ItemsSource = con.UserData.OrderBy(x => x.Fio).Where(x => x.RoleId == 4).ToList();
         orderCodeTextBox.Text = (con.Orders.OrderBy(x => x.OrderId).LastOrDefault().OrderId + 1).ToString();
-        Console.WriteLine(orderCodeTextBox.Text);
     }
     public List<int> services = new List<int>();
     public List<decimal> price = new List<decimal>();
@@ -46,6 +49,21 @@ public partial class OrderWindow : Window
         var result = await box.ShowAsync();
     }
 
+    /*public void CreateReport()
+    {
+        string projectDir = Directory.GetParent(AppContext.BaseDirectory)!.Parent!.Parent!.Parent!.FullName;
+        string reportsDir = Path.Combine(projectDir, "Resources", "Reports");
+        string filePath = Path.Combine(reportsDir, "HelloWorld_out.pdf");
+
+        using (var document = new Aspose.Pdf.Document())
+        {
+            var page = document.Pages.Add();
+            page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment("Hello World!"));
+
+            document.Save(filePath);
+        }
+    }*/
+
     private async void ServiceSelectionBtn_click(object? s, Avalonia.Interactivity.RoutedEventArgs e)
     {
         Service serv = (ServiceComboBox.SelectedItem as Service);
@@ -53,7 +71,8 @@ public partial class OrderWindow : Window
         {
             services.Add(serv.ServiceId);
             price.Add(serv.CostPerHour);
-            listServicesTextBox.Text += $"{serv.ServiceTittle} {price.Last()}\n";
+            listServicesTextBox.Text += $"{serv.ServiceTittle} - {price.Last()}руб.\n";
+            PriceTextBox.Text = $"Стоимость заказа: {price.Sum()} рублей";
         }
         else
         {
@@ -65,7 +84,8 @@ public partial class OrderWindow : Window
     {
         services.Clear();
         price.Clear();
-        listServicesTextBox.Text = "";
+        listServicesTextBox.Text = string.Empty;   
+        PriceTextBox.Text = "Стоимость заказа: 0 рублей";
 
     }
 
@@ -127,6 +147,27 @@ public partial class OrderWindow : Window
                 return;
             }
         }
+        string projectDir = Directory.GetParent(AppContext.BaseDirectory)!.Parent!.Parent!.Parent!.FullName;
+        string reportsDir = Path.Combine(projectDir, "Resources", "Reports");
+        string filePath = Path.Combine(reportsDir, $"order_{code}.pdf");
+
+        using (var document = new Aspose.Pdf.Document())
+        {
+            var page = document.Pages.Add();
+            page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment($"Время создания: {DateOnly.FromDateTime(DateTime.Now).ToString()} {TimeOnly.FromDateTime(DateTime.Now).ToString()}"));
+            page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment($"Код клиента: {tUser.ClientId}"));
+            page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment($"Код заказа: {code}"));
+            page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment($"Клиент: {con.UserData.Where(u => u.UserDataId == tUser.UserDataId).FirstOrDefault().Fio}"));
+            page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment($"Адрес клиента: {tUser.AddresTittle}"));
+            page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment($"\nПеречень услуг:"));
+            for (int i = 0; i < services.Count; i++)
+            {
+                page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment($" - {con.Services.Where(s => s.ServiceId == services[i]).FirstOrDefault().ServiceTittle} ({price[i]} рублей)"));
+            }
+            page.Paragraphs.Add(new Aspose.Pdf.Text.TextFragment($"\nОбщая стоимость: {price.Sum()}"));
+            document.Save(filePath);
+        }
+
         Order order = new Order()
         {
             OrderCode = code,
@@ -138,8 +179,8 @@ public partial class OrderWindow : Window
             DateClose = null,
             RentTime = new TimeOnly(hours, minutes)
         };
-        con.Orders.Add(order);
-        con.SaveChanges();
+        /*con.Orders.Add(order);
+        con.SaveChanges();*/
 
         for (int i = 0; i < services.Count; i++)
         {
@@ -149,8 +190,8 @@ public partial class OrderWindow : Window
                 OrderId = con.Orders.OrderBy(x => x.OrderId).LastOrDefault().OrderId,
                 ServiceId = services[i]
             };
-            con.UserServices.Add(userService);
-            con.SaveChanges();
+            /*con.UserServices.Add(userService);
+            con.SaveChanges();*/
         }
 
         ShowMBox("Успех", "Заказ добавлен");

@@ -1,4 +1,4 @@
-<Window xmlns="https://github.com/avaloniaui"
+﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -8,13 +8,37 @@
 		Background="White"
 		MinWidth="400">
 	<Grid ShowGridLines="False" RowDefinitions="30, *, 30" ColumnDefinitions="50, *, 50">
-		<Grid ShowGridLines="False" Grid.Row="1" Grid.Column="1" RowDefinitions="*,*,*,*" ColumnDefinitions="*,2*,*">
+		<Grid ShowGridLines="False" Grid.Row="1" Grid.Column="1" RowDefinitions="*,*,*,*," ColumnDefinitions="*,2*,*">
 			<Border Grid.Column="1"
 				   Grid.Row="0"
 				   Background="#76e383"
 				   Grid.RowSpan="4"
 				   CornerRadius="30"
 				   />
+			<Grid ShowGridLines="True" Name="CaptchaGrid" IsVisible="True" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" Grid.RowDefinitions="*,*,*">
+				<Border 
+					Grid.Row="0"
+					Background="#76e383"
+					Grid.RowSpan="4"
+					CornerRadius="10"/>
+				<Image 
+					Name="CaptchaImg"
+					Grid.Row="0"
+					VerticalAlignment="Stretch"
+					HorizontalAlignment="Stretch"/>
+				<TextBox
+					Name="CaptchaTextBox"
+					Grid.Row="1"
+					Margin="20"/>
+				<Button
+					Name="CaptchaButton"
+					Content="Обновить"
+					Grid.Row="2"
+					HorizontalAlignment="Stretch"
+					VerticalAlignment="Stretch"
+					Margin="30"
+					CornerRadius="10"/>
+			</Grid>
 			<Border Grid.Column="1"
 				   Grid.Row="0"
 				   Background="#498c51"
@@ -35,7 +59,7 @@
 				Grid.Row="1" 
 				Grid.Column="1"
 				Text="fedorov@namecomp.ru"
-				Margin="10"
+				Margin="20"
 				HorizontalContentAlignment="Center"
 				VerticalContentAlignment="Center"
 				Watermark="Логин"
@@ -53,7 +77,7 @@
 				Grid.Row="0" 
 				Text="8ntwUp"
 				Grid.Column="0" 
-				Margin="10"
+				Margin="20"
 				HorizontalContentAlignment="Center"
 				VerticalContentAlignment="Center"
 				CornerRadius="10"
@@ -69,9 +93,9 @@
 				Content="+"
 				Grid.Row="2"
 				Grid.Column="1"
-				Margin="0,0,10,0"
-				VerticalAlignment="Center"
-				HorizontalAlignment="Center"/>
+				Margin="0, 20"
+				VerticalAlignment="Stretch"
+				HorizontalAlignment="Stretch"/>
 			</Grid>
 			<Button Grid.Row="3"
 					Name="LoginBtn"

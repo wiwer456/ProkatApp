@@ -60,8 +60,9 @@
                       VerticalAlignment="Top"
                       HorizontalAlignment="Stretch"
                       Margin="10,5"
+                      Foreground="white"
                       FontFamily="Comic Sans MS">
-                <ComboBoxItem Content="По возрастанию"></ComboBoxItem>
+                <ComboBoxItem Content="По возрастанию" Foreground="white"></ComboBoxItem>
                 <ComboBoxItem Content="По убыванию"></ComboBoxItem>
             </ComboBox>
         </Grid>

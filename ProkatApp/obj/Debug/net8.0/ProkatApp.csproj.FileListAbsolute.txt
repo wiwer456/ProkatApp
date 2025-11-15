@@ -153,7 +153,6 @@ C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\osx\na
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
-C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
@@ -167,11 +166,7 @@ C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win-x6
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\obj\Debug\net8.0\ProkatApp.csproj.AssemblyReference.cache
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\obj\Debug\net8.0\Avalonia\Resources.Inputs.cache
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\obj\Debug\net8.0\Avalonia\resources
@@ -202,3 +197,16 @@ C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Image
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Федоров.jpeg
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Хохлов.jpeg
 C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Images\Ширяев.jpeg
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Aspose.PDF.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Reports\HelloWorld_out.pdf
+C:\Users\Admin\source\repos\ProkatApp\ProkatApp\bin\Debug\net8.0\Resources\Reports\order_78.pdf

@@ -1,13 +1,22 @@
-﻿using Avalonia.Controls;
+﻿using Avalonia;
+using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Media;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using MsBox.Avalonia;
 using ProkatApp.Context;
 using ProkatApp.Models;
+using ProkatApp.Properties;
+using SkiaSharp;
+using System;
 using System.Data.Entity;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.Marshalling;
+using System.Security.Cryptography;
 using Tmds.DBus.Protocol;
-using ProkatApp.Properties;
 
 namespace ProkatApp
 {
@@ -83,7 +92,8 @@ namespace ProkatApp
             }
             else if (Settings.Default.attempt_count >= 2)
             {
-                ShowMBox("Ошибка", "капча");
+                CaptchaGrid.IsVisible = true;
+                CaptchaImg.IsVisible = true;
                 Settings.Default.attempt_count = 0;
             }
         }
@@ -100,5 +110,18 @@ namespace ProkatApp
             }
         }
 
+        public string GenerateRandomString(int len)
+        {
+            string chars = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890";
+            /*string chars = "ЁЙЦУКЕНГШЩЗФЫВАПРОЛДЯЧСМИТЬйцукенгшщзхъфывапролджэячсмитьбюQWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890";*/
+            string result = "";
+            for (int i = 0; i < len; i++)
+            {
+                result += chars[RandomNumberGenerator.GetInt32(chars.Length)];
+            }
+            return result;
+        }
+
+       
     }
 }

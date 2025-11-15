@@ -7,20 +7,22 @@
 		x:CompileBindings="False"
         Title="OrderWindow"
 		Background="#ffffff">
-	<Grid ShowGridLines="False" RowDefinitions="30,*,30" ColumnDefinitions="*,3*,2*,*,*,*">
+	<Grid ShowGridLines="False" RowDefinitions="30,*,30" ColumnDefinitions="30,3*,2*,*,*,*,30">
 		<Button Content="Назад"
+				Grid.ColumnSpan="2"
 				Name="OrderBackBtn"
 				Click="OrderBackBtn_Click"
 				Background="#498c51"/>
 		<Grid
-			ShowGridLines="True"
+			ShowGridLines="False"
 			Grid.Row="1"
 			Grid.Column="1"
-			Grid.ColumnSpan="4"
+			Grid.ColumnSpan="5"
 			RowDefinitions="*,*,*,*,*,*"
-			ColumnDefinitions="*,*">
+			ColumnDefinitions="2*,*,*,*">
 			<Border
 				Grid.RowSpan="6"
+				Grid.ColumnSpan="2"
 				Grid.Row="0"
 				Grid.Column="0"
 				Background="#76e383"
@@ -28,22 +30,26 @@
 			<Border
 				Grid.Row="0"
 				Grid.Column="0"
+				Grid.ColumnSpan="2"
 				Background="#498c51"
 				CornerRadius="30"/>
 			<Border
 				Grid.Row="0"
-				Grid.Column="1"
-				Grid.RowSpan="4"
+				Grid.Column="2"
+				Grid.ColumnSpan="2"
+				Grid.RowSpan="6"
 				Background="#76e383"
 				CornerRadius="30"/>
 			<Border
 				Grid.Row="0"
-				Grid.Column="1"
+				Grid.Column="2"
+				Grid.ColumnSpan="2"
 				Background="#498c51"
 				CornerRadius="30"/>
 			<TextBlock
-				Text="Список Услуг:"
-				Grid.Column="1"
+				Text="Управление:"
+				Grid.Column="2"
+				Grid.ColumnSpan="2"
 				VerticalAlignment="Center"
 				HorizontalAlignment="Center"
 				FontFamily="Comic Sans MS"
@@ -51,23 +57,22 @@
 				Foreground="Black"/>
 			<Button
 				Grid.Row="3"
-				Grid.Column="1"
+				Grid.Column="2"
+				Grid.ColumnSpan="2"
 				Name="clearServicesBtn"
 				Click="clearServicesBtn_click"
 				VerticalContentAlignment="Center"
 				HorizontalAlignment="Center"
 				VerticalAlignment="Center"
-				Content="Очистить"
+				Content="Очистить Услуги"
 				FontFamily="Comic Sans MS"
 				FontSize="20"
 				CornerRadius="10"
-				Height="50"
-				Width="200"
-				Foreground="Black"
-				Background="#498c51"/>
+				Foreground="Black"/>
 			<TextBox
 				Name="listServicesTextBox"
-				Grid.Column="1"
+				Grid.Column="2"
+				Grid.ColumnSpan="2"
 				Grid.Row="1"
 				Grid.RowSpan="2"
 				Margin="10"
@@ -78,7 +83,20 @@
 				Foreground="White"
 				CornerRadius="10"/>
 			<TextBlock
+				Name="PriceTextBox"
+				Text="Стоимость заказа: 0 рублей"
+				FontSize="20"
+				Grid.Column="2"
+				Grid.Row="4"
+				Grid.ColumnSpan="2"
+				VerticalAlignment="Center"
+				HorizontalAlignment="Left"
+				Margin="10"
+				/>
+
+			<TextBlock
 				Text="Регистрация заказа"
+				Grid.ColumnSpan="2"
 				VerticalAlignment="Center"
 				HorizontalAlignment="Center"
 				FontFamily="Comic Sans MS"
@@ -87,6 +105,7 @@
 			<TextBox
 				Name="orderCodeTextBox"
 				Grid.Row="1"
+				Grid.ColumnSpan="2"
 				Margin="10"
 				VerticalContentAlignment="Center"
 				HorizontalContentAlignment="Center"
@@ -94,9 +113,11 @@
 				FontSize="20"
 				Foreground="White"
 				CornerRadius="10"/>
-			<Grid Grid.Row="2" ShowGridLines="False" ColumnDefinitions="6*,*">
-				<AutoCompleteBox
+			<AutoCompleteBox
 					Name="ClientComboBox"
+					Grid.Column="0"
+					Grid.Row="2"
+					Grid.ColumnSpan="2"
 					VerticalAlignment="Stretch"
 					HorizontalAlignment="Stretch"
 					Margin="10"
@@ -106,19 +127,34 @@
 					Watermark="Клиент"
 					ValueMemberBinding="{Binding Fio}"
 					CornerRadius="10"/>
-				<Button
-					Name="AddClientBtn"
-					Click="AddClientBtn_Click"
-					Grid.Column="1"
-					HorizontalAlignment="Stretch"
-					VerticalAlignment="Stretch"
-					Background="#498c51"
-					Margin="5, 15"
-					Content="+"
-					VerticalContentAlignment="Center"
-					HorizontalContentAlignment="Center"/>
-			</Grid>
-			<Grid Grid.Row="3" ShowGridLines="False" ColumnDefinitions="6*,*,*">
+	
+			<Button
+				Name="AddClientBtn"
+				Click="AddClientBtn_Click"
+				Grid.Column="3"
+				Grid.Row="5"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Stretch"
+				Background="#498c51"
+				Margin="15"
+				CornerRadius="15"
+				Content="Добавить пользователя"
+				VerticalContentAlignment="Center"
+				HorizontalContentAlignment="Center"/>
+			<Button
+				Name="CreateServiceBtn"
+				Grid.Column="2"
+				Grid.Row="5"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Stretch"
+				Background="#498c51"
+				Margin="15"
+				CornerRadius="15"
+				Content="Добавить услугу"
+				VerticalContentAlignment="Center"
+				HorizontalContentAlignment="Center"
+				Click="CreateServiceBtn_Click"/>
+			<Grid Grid.Row="3" Grid.ColumnSpan="2" ShowGridLines="False" ColumnDefinitions="7*,*">
 				<ComboBox
 				Name="ServiceComboBox"
 				Grid.Row="3"
@@ -133,7 +169,7 @@
 				PlaceholderForeground="LightGray">
 				<ComboBox.ItemTemplate>
 					<DataTemplate>
-						<TextBlock Text="{Binding ServiceTittle}"></TextBlock>
+						<TextBlock Foreground="white" Text="{Binding ServiceTittle}"></TextBlock>
 					</DataTemplate>
 				</ComboBox.ItemTemplate>
 			</ComboBox>
@@ -148,22 +184,12 @@
 				VerticalContentAlignment="Center"
 				HorizontalContentAlignment="Center"
 				Click="ServiceSelectionBtn_click"/>
-			<Button
-				Name="CreateServiceBtn"
-				Grid.Column="2"
-				HorizontalAlignment="Stretch"
-				VerticalAlignment="Stretch"
-				Background="#498c51"
-				Margin="5, 15"
-				Content="+'"
-				VerticalContentAlignment="Center"
-				HorizontalContentAlignment="Center"
-				Click="CreateServiceBtn_Click"/>
 			</Grid>
 			
 			<TextBox
 				Name="rentTimeTextBox"
 				Grid.Row="4"
+				Grid.ColumnSpan="2"
 				Margin="10"
 				VerticalContentAlignment="Center"
 				HorizontalContentAlignment="Center"
@@ -173,18 +199,16 @@
 				Foreground="white"/>
 			<Button
 				Grid.Row="5"
+				Grid.ColumnSpan="2"
 				Name="addOrderBtn"
 				Click="addOrderBtn_click"
-				HorizontalContentAlignment="Center"
-				VerticalContentAlignment="Center"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Stretch"
+				Margin="120, 10"
 				Content="Добавить заказ"
 				FontFamily="Comic Sans MS"
 				FontSize="20"
 				CornerRadius="10"
-				Height="50"
-				Width="200"
 				Foreground="Black"
 				Background="#498c51"/>
 		</Grid>
