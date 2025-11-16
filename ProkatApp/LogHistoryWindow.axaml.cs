@@ -20,7 +20,7 @@ public partial class LogHistoryWindow : Window
         LoadHistory();
         ApplyFilters();
         DataContext = this;
-        FiltersComboBox.SelectedIndex = 0;
+        FiltersComboBox.SelectedIndex = 1;
     }
 
     public ObservableCollection<HistoryRow> historyRows { get; set; }

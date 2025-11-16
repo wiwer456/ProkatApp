@@ -26,6 +26,7 @@ public partial class Menu : Window
         var role = context.Roles.First(x => x.RoleId == data.RoleId);
         FioTextBlock.Text = data.Fio;
         userRoleTextBlock.Text = role.RoleName;
+
         string imagePath = Path.Combine("Resources", "Images", user.ImagePath);
         if (File.Exists(imagePath))
         {
@@ -37,12 +38,10 @@ public partial class Menu : Window
         {
             acceptTovarBtn.IsVisible = false;
             entranceHistoryBtn.IsVisible = false;
-            createReportBtn.IsVisible = false;
         }
         if (data.RoleId == 3)
         {
             entranceHistoryBtn.IsVisible = false;
-            createReportBtn.IsVisible = false;
         }
     }
 

@@ -93,8 +93,8 @@ public partial class OrderWindow : Window
     {
         ProkatContext con = new ProkatContext();
         string code = "";
-        int hours = 0; /*int.Parse(rentTimeTextBox.Text) / 60;*/
-        int minutes = 0;/*int.Parse(rentTimeTextBox.Text) % 60;*/
+        int hours = 0; 
+        int minutes = 0;
 
         /*if (string.IsNullOrWhiteSpace(orderCodeTextBox.Text))
         {
@@ -179,8 +179,8 @@ public partial class OrderWindow : Window
             DateClose = null,
             RentTime = new TimeOnly(hours, minutes)
         };
-        /*con.Orders.Add(order);
-        con.SaveChanges();*/
+        con.Orders.Add(order);
+        con.SaveChanges();
 
         for (int i = 0; i < services.Count; i++)
         {
@@ -190,12 +190,11 @@ public partial class OrderWindow : Window
                 OrderId = con.Orders.OrderBy(x => x.OrderId).LastOrDefault().OrderId,
                 ServiceId = services[i]
             };
-            /*con.UserServices.Add(userService);
-            con.SaveChanges();*/
+            con.UserServices.Add(userService);
+            con.SaveChanges();
         }
 
         ShowMBox("Успех", "Заказ добавлен");
-        /*orderCodeTextBox.Text = code + 1;*/
     }
 
     private void OrderBackBtn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)

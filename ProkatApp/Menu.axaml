@@ -101,16 +101,5 @@
 			Background="#498c51"
 			Foreground="Black"
 			/>
-		<Button
-			Name="createReportBtn"
-			Grid.Row="2"
-			Grid.Column="3"
-			VerticalAlignment="Stretch"
-			HorizontalAlignment="Stretch"
-			Margin="10"
-			CornerRadius="20"
-			Content="Создать отчёт"
-			Background="#498c51"
-			Foreground="Black"/>
 	</Grid>
 </Window>

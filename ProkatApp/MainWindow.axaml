@@ -15,7 +15,7 @@
 				   Grid.RowSpan="4"
 				   CornerRadius="30"
 				   />
-			<Grid ShowGridLines="True" Name="CaptchaGrid" IsVisible="True" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" Grid.RowDefinitions="*,*,*">
+			<Grid ShowGridLines="True" Name="CaptchaGrid" IsVisible="False" Grid.Column="2" Grid.Row="1" Grid.RowSpan="3" Grid.RowDefinitions="*,*,*">
 				<Border 
 					Grid.Row="0"
 					Background="#76e383"
@@ -25,13 +25,16 @@
 					Name="CaptchaImg"
 					Grid.Row="0"
 					VerticalAlignment="Stretch"
-					HorizontalAlignment="Stretch"/>
+					HorizontalAlignment="Stretch"
+					Height="50"
+					Width="200"/>
 				<TextBox
 					Name="CaptchaTextBox"
 					Grid.Row="1"
 					Margin="20"/>
 				<Button
 					Name="CaptchaButton"
+					Click="CaptchaButton_Click"
 					Content="Обновить"
 					Grid.Row="2"
 					HorizontalAlignment="Stretch"
